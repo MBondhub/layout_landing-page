@@ -1,0 +1,179 @@
+.contact-us {
+  margin: 0;
+  &__container {
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: repeat(var(--columns), 1fr);
+
+    --colomns: 2;
+
+    @include on-tablet {
+      --columns: 6;
+
+      column-gap: 24px;
+      padding-top: 120px;
+      padding-bottom: 80px;
+    }
+
+    @include on-desktop {
+      --columns: 12;
+
+      padding-top: 120px;
+      padding-bottom: 120px;
+    }
+  }
+
+  &__title {
+    grid-column: 1 / -1;
+  }
+
+  &__form {
+    grid-column: span 2;
+
+    @include on-tablet {
+      grid-column: span 6;
+    }
+
+    @include on-desktop {
+      grid-column: 1 / span 6;
+    }
+  }
+}
+
+.input {
+  box-sizing: border-box;
+  width: 280px;
+  height: 48px;
+  margin-top: 48px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid transparent;
+
+  @include on-tablet {
+    margin-top: 56px;
+    width: 600px;
+    height: 48px;
+  }
+
+  @include on-desktop {
+    width: 498px;
+    height: 48px;
+  }
+
+  &__email {
+    width: 280px;
+    height: 48px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-top: 16px;
+    outline: none;
+    border: 1px solid transparent;
+
+    @include on-tablet {
+      width: 600px;
+      height: 48px;
+    }
+
+    @include on-desktop {
+      width: 498px;
+      height: 48px;
+    }
+  }
+
+  &__message {
+    resize: none;
+    display: block;
+    width: 280px;
+    height: 148px;
+    margin-top: 16px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid transparent;
+
+    @include on-tablet {
+      width: 600px;
+      height: 148px;
+    }
+
+    @include on-desktop {
+      width: 498px;
+      height: 148px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 27px;
+    font-style: Bold;
+    background-color: #f98921;
+    color: #fff;
+    width: 280px;
+    height: 56px;
+    border-radius: 8px;
+    margin-top: 32px;
+
+    @include on-tablet {
+      width: 600px;
+      height: 56px;
+    }
+
+    @include on-desktop {
+      width: 498px;
+      height: 56px;
+    }
+  }
+}
+
+.input__hover {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+  color: #7e7e83;
+  padding-left: 16px;
+}
+
+.input__hover:hover {
+  border: 1px solid #dbdbdb;
+}
+
+.input__hover:focus {
+  border-color: #f98921;
+}
+
+.input__button:hover {
+  background-color: #1b2129;
+}
+
+.input__button:active {
+  background-color: #010810;
+}
+
+.contact-us__info {
+  column-gap: 20px;
+  margin-top: 56px;
+
+  @include on-tablet {
+    grid-column: span 6;
+    column-gap: 24px;
+  }
+
+  @include on-desktop {
+    grid-column: 8 / span 5;
+  }
+
+  &--phone,
+  &--email,
+  &--address {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #9393a3;
+  }
+}
