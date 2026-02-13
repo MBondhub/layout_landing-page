@@ -1,5 +1,4 @@
 .contact-us {
-  margin: 0;
   &__container {
     display: grid;
     column-gap: 20px;
@@ -41,7 +40,6 @@
 }
 
 .input {
-  box-sizing: border-box;
   width: 280px;
   height: 48px;
   margin-top: 48px;
@@ -104,9 +102,9 @@
   }
 
   &__button {
-    display: flex;
     text-decoration: none;
     align-items: center;
+    border: none;
     justify-content: center;
     font-weight: 700;
     font-size: 16px;
@@ -168,12 +166,25 @@
     grid-column: 8 / span 5;
   }
 
-  &--phone,
+  &--phone {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #9393a3;
+  }
   &--email,
   &--address {
     font-weight: 400;
     font-size: 14px;
     line-height: 140%;
     color: #9393a3;
+    margin-top: 24px;
   }
+}
+
+.info__phone {
+  text-decoration: none;
+  font-size: 16px;
+  color: #191919;
+  font-weight: 400;
 }

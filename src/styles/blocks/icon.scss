@@ -27,3 +27,34 @@
     background-image: url(../images/icon--close-4x.png);
   }
 }
+
+.tel__hover {
+  position: absolute;
+  right: 100%;
+  margin-right: 12px;
+
+  white-space: nowrap;
+  color: #1b2129;
+  font-size: 12px;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(20px);
+  transition: all 0.3s;
+  pointer-events: none;
+  font-weight: 700;
+}
+
+.phone__group {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    .tel__hover {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+  }
+}

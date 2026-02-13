@@ -11,6 +11,9 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>B&O</title>
+    <link rel="icon"
+          type="image"
+          href="src/images/logo-4x.png">
     <link
       rel="preconnect"
       href="https://fonts.googleapis.com"
@@ -51,10 +54,15 @@
               />
             </a>
             <div class="top-bar__icons">
-              <a
-                href="#"
-                class="icon icon--phone"
-              ></a>
+              <div class="phone__group">
+                <a
+                  href="tel:+1 234 5555-55-55"
+                  class="icon icon--phone"
+                ></a>
+                <span class="tel__hover">
+                    +1 234 5555-55-55
+                </span>
+              </div>
               <a
                 href="#menu"
                 class="icon icon-menu"
@@ -280,9 +288,9 @@
               <h3 class="category__title">Smart Home</h3>
             </article>
 
-            <a href="#" class="category__button">
+            <button class="category__button">
               View all
-            </a>
+            </button>
           </div>
         </section>
         <!--#endregion-->
@@ -326,7 +334,8 @@
                        section-title">
                        Contact us
             </h2>
-            <form class="contact-us__form">
+            <form onsubmit="this.reset(); return false;"
+            class="contact-us__form">
               <input
                   class="input input__hover"
                   type="text"
@@ -347,32 +356,36 @@
                     placeholder="Message"
               ></textarea>
 
-              <a href="#" class="input__button">
+              <button class="input__button">
                   Send
-              </a>
+              </button>
             </form>
 
             <div class="contact-us__info">
               <h1 class="contact-us__info--phone">
                 Phone
               </h1>
-              <p>
+              <a href="tel:+1 234 5555-55-55"
+                 class="info__phone">
                 +1 234 5555-55-55
-              </p>
+              </a>
               <h1 class="contact-us__info--email">
                 Email
               </h1>
-              <p>
+              <a href="#"
+                 class="info__phone">
                hello@bang&olufsen.com
-              </p>
+              </a>
               <h1 class="contact-us__info--address">
                 Address
               </h1>
-              <p>
+              <a href="https://www.google.com/maps/place/400+N+1st+Ave+STE+700,+Minneapolis,+MN+55401,+%D0%A1%D0%A8%D0%90/@44.9813296,-93.275706,17z/data=!3m1!4b1!4m6!3m5!1s0x52b3328fdf233887:0x3348e5113ed2472d!8m2!3d44.9813258!4d-93.2731311!16s%2Fg%2F11nyn_tfyt?authuser=0&entry=ttu&g_ep=EgoyMDI2MDIwNC4wIKXMDSoASAFQAw%3D%3D"
+                 target="_blank"
+                 class="info__phone">
                 400 first ave.<br>
                 suite 700 <br>
                 Minneapolis, MN 55401
-              </p>
+              </a>
             </div>
           </div>
         </section>
