@@ -3,6 +3,7 @@
     display: grid;
     row-gap: 40px;
 
+
     @include on-tablet {
       row-gap: 56px;
     }
@@ -22,18 +23,39 @@
     @include on-tablet {
       column-gap: 24px;
 
-      --column: 6;
+      --columns: 6;
     }
 
     @include on-desktop {
       column-gap: 24px;
 
-      --column: 12;
+      --columns: 12;
     }
+
   }
 
   &__photo {
     width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__link {
+    display: block;
+    grid-column: span 1;
+    background-color: #F9F9F9;
+
+    
+
+    @include on-tablet {
+      grid-column: span 3;
+      aspect-ratio: 3 / 2;
+    }
+
+    @include on-desktop {
+      grid-column: span 6;
+      aspect-ratio: 3 / 2;
+    }
   }
 
   &__title {
@@ -67,6 +89,7 @@
 
 .category__button:hover {
   background-color: #1b2129;
+  cursor: pointer;
 }
 
 .category__button:active {

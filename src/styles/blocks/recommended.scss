@@ -3,6 +3,8 @@
     display: grid;
     row-gap: 40px;
 
+    
+
     @include on-tablet {
       justify-items: center;
     }
