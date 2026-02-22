@@ -50,11 +50,13 @@
   display: flex;
   align-items: center;
 
-  &:hover {
-    .tel__hover {
+  @include on-desktop {
+    &:hover {
+      .tel__hover {
       opacity: 1;
       visibility: visible;
       transform: translateX(0);
+     }
     }
   }
 }
