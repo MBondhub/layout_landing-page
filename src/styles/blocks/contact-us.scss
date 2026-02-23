@@ -1,4 +1,6 @@
 .contact-us {
+  box-sizing: border-box;
+
   &__container {
     display: grid;
     column-gap: 20px;
@@ -10,15 +12,11 @@
       --columns: 6;
 
       column-gap: 24px;
-      padding-top: 120px;
       padding-bottom: 80px;
     }
 
     @include on-desktop {
       --columns: 12;
-
-      padding-top: 120px;
-      padding-bottom: 120px;
     }
   }
 
@@ -27,7 +25,6 @@
   }
 
   &__form {
-    margin-right: 20px;
     grid-column: span 2;
 
     @include on-tablet {
@@ -41,11 +38,12 @@
 }
 
 .input {
+  box-sizing: border-box;
   width: 100%;
   height: 48px;
   margin-top: 48px;
   background-color: #f9f9f9;
-  border-radius: 5px;
+  border-radius: 8px;
   outline: none;
   border: 1px solid transparent;
 
@@ -63,10 +61,11 @@
   }
 
   &__email {
+    box-sizing: border-box;
     width: 100%;
     height: 48px;
     background-color: #f9f9f9;
-    border-radius: 5px;
+    border-radius: 8px;
     margin-top: 16px;
     outline: none;
     border: 1px solid transparent;
@@ -85,13 +84,13 @@
   }
 
   &__message {
+    box-sizing: border-box;
     resize: none;
-    display: block;
     width: 100%;
     height: 148px;
     margin-top: 16px;
     background-color: #f9f9f9;
-    border-radius: 5px;
+    border-radius: 8px;
     outline: none;
     border: 1px solid transparent;
 
@@ -109,6 +108,7 @@
   }
 
   &__button {
+    box-sizing: border-box;
     text-decoration: none;
     align-items: center;
     border: none;

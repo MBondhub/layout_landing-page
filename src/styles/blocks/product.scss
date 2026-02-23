@@ -1,7 +1,15 @@
 .product {
+  position: relative;
+
+  &__container {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+  }
+
   &__photo {
     width: 100%;
-    @include hover(transform, scale(1.1));
+    @include hover(transform, scale(1.2));
   }
 }
 
