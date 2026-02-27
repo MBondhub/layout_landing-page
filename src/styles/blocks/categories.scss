@@ -84,6 +84,8 @@
     margin-top: 40px;
     border-radius: 8px;
     height: 56px;
+    cursor: pointer;
+    transition: 0.4s;
 
     @include on-desktop {
       width: 324px;
@@ -94,7 +96,7 @@
 
 .category__button:hover {
   background-color: #1b2129;
-  cursor: pointer;
+  transition: 0.4s;
 }
 
 .category__button:active {
